@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeel tootsooluur</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div>
+      <h3>ЗЭЭЛИЙН ТООЦООЛУУР</h3>
+    </div>
+    <div class="flex justify-center ">
+        <div  class="w-1/2">
+            <div class="flex justify-center">
+                <div class="pr-10">
+                    <p>Авах боломжтой зээлийн дүн /₮/.</p>
+                    <div>
+                      <input
+                        class="border-2 border-blue-300 w-xs"
+                        type="text"
+                        name="loanAmount"
+                        id="loanAmount"
+                        value="5000000"
+                        placeholder="Зээлийн дүн"
+                        onkeydown="init()"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <p>Жилийн хүү /%/.</p>
+                    <div>
+                      <input
+                        class="border-2 border-blue-300 w-xs"
+                        type="text"
+                        name="jiliinhuu"
+                        id="jiliinhuu"
+                        value="9"
+                        onkeydown="init()"
+                        placeholder="Жилийн хүү"
+                      />
+                    </div>
+                  </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="pr-10">
+                    <p>Хугацаа: /Сараар/.</p>
+                    <div>
+                      <input
+                        class="border-2 border-blue-300 w-xs"
+                        type="text"
+                        name="hugatsaa"
+                        id="hugatsaa"
+                        value="12"
+                        onkeydown="init()"
+                        placeholder="Хугацаа"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <p>Зээл авах огноо:</p>
+                    <div>
+                      <input
+                        class="border-2 border-blue-300 w-xs"
+                        type="date"
+                        name="ognoo"
+                        id="ognoo"
+                        
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="w-[482px] h-[238px] bg-gray-200 rounded-lg p-5 w-1/2">
+            <h4 class="text-[#288db3]">Зээлийн дүн</h4>
+            <p id="total" class="text-[#288db3] text-3xl">₮</p>
+            <p class="text-[#288db3]">Сарын төлбөр:</p>
+            <p class="tex-2xl">$$$$$$</p>
+        </div>
+    </div>
+    <div class="">
+        <h2>ЗЭЭЛ ТӨЛӨЛТИЙН ХУВААРЬ</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th>Сар</th>
+                    <th>Огноо</th>
+                    <th>Хоног</th>
+                    <th>Үндсэн зээлийн төлбөр</th>
+                    <th>Хүүгийн төлбөр</th>
+                    <th>Тэнцүү төлбөр</th>
+                    <th>Үндсэн зээлийн үлдэгдэл</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script>
+        init();
+        function init()
+        {
+            var amount=document.getElementById("loanAmount").value;
+            document.getElementById("total").innerText=amount+"₮";
+            var month=document.getElementById("hugatsaa").value;
+            var rate=document.getElementById("jiliinhuu").value;
+            // var total=amount*(1+rate/100)*month;
+            document.getElementById("total").innerText=total+"₮";   
+            
+        }
+    </script>
+  </body>
+</html>
