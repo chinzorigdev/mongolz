@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зээлийн тооцоолуур</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-5">
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-center text-blue-600">Зээлийн Тооцоолуур</h2>
+        
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <div>
+                <label class="block">Авах боломжтой зээлийн дүн (₮)</label>
+                <input type="number" id="loanAmount" class="w-full border p-2" value="5000000">
+            </div>
+            <div>
+                <label class="block">Жилийн хүү (%)</label>
+                <input type="number" id="jiliinhuu" class="w-full border p-2" value="9">
+            </div>
+            <div>
+                <label class="block">Хугацаа (сар)</label>
+                <input type="number" id="hugatsaa" class="w-full border p-2" value="12">
+            </div>
+            <div>
+                <label class="block">Зээл авах огноо</label>
+                <input type="date" id="ognoo" class="w-full border p-2">
+            </div>
+        </div>
+        
+        <button onclick="calculateLoan()" class="mt-4 w-full bg-blue-500 text-white p-2 rounded">Тооцоолох</button>
+        
+        <div class="mt-4 p-4 bg-gray-200 rounded">
+            <h3 class="text-lg text-blue-600">Нийт зээлийн дүн:</h3>
+            <p id="total" class="text-2xl font-bold">₮0</p>
+            <h3 class="text-lg text-blue-600">Сарын төлбөр:</h3>
+            <p id="monthlyPayment" class="text-2xl font-bold">₮0</p>
+        </div>
+    </div>
+    
+    <div class="max-w-3xl mx-auto mt-6 bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold">Зээл төлөлтийн хуваарь</h2>
+        <div class="overflow-x-auto mt-4">
+            <table class="w-full border border-gray-300 text-center">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border px-4 py-2">Сар</th>
+                        <th class="border px-4 py-2">Огноо</th>
+                        <th class="border px-4 py-2">Үндсэн төлбөр</th>
+                        <th class="border px-4 py-2">Хүүгийн төлбөр</th>
+                        <th class="border px-4 py-2">Нийт төлбөр</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentSchedule"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function calculateLoan() {
+            let amount = parseFloat(document.getElementById("loanAmount").value);
+            let annualRate = parseFloat(document.getElementById("jiliinhuu").value) / 100;
+            let months = parseInt(document.getElementById("hugatsaa").value);
+            let monthlyRate = annualRate / 12;
+            
+            let monthlyPayment = (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -months));
+            
+            document.getElementById("total").innerText = amount.toLocaleString() + "₮";
+            document.getElementById("monthlyPayment").innerText = monthlyPayment.toLocaleString(undefined, { maximumFractionDigits: 2 }) + "₮";
+            
+            generateSchedule(amount, monthlyRate, months, monthlyPayment);
+        }
+        
+        function generateSchedule(principal, rate, months, monthlyPayment) {
+            let tbody = document.getElementById("paymentSchedule");
+            tbody.innerHTML = "";
+            let balance = principal;
+            let startDate = new Date(document.getElementById("ognoo").value);
+            
+            for (let i = 1; i <= months; i++) {
+                let interestPayment = balance * rate;
+                let principalPayment = monthlyPayment - interestPayment;
+                balance -= principalPayment;
+                
+                let row = `<tr>
+                    <td class='border px-4 py-2'>${i}</td>
+                    <td class='border px-4 py-2'>${startDate.toISOString().split('T')[0]}</td>
+                    <td class='border px-4 py-2'>${principalPayment.toFixed(2)}₮</td>
+                    <td class='border px-4 py-2'>${interestPayment.toFixed(2)}₮</td>
+                    <td class='border px-4 py-2'>${monthlyPayment.toFixed(2)}₮</td>
+                </tr>`;
+                tbody.innerHTML += row;
+                startDate.setMonth(startDate.getMonth() + 1);
+            }
+        }
+    </script>
+</body>
+</html>

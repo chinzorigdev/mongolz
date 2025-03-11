@@ -1,22 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mongolz</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-</head>
-<body>
-    <nav  >
-        <ul  class="flex justify-between bg-gray-50 border-b border-gray-200 ">
-          <li>THE MONGOLZ SHOP</li>
-          <li>ЗАХИАЛГЫН ЯВЦ</li>
-        </ul>
-      </nav>
-      <nav>
-        
-        <ul><li class="text-underline-offset: 24px">72444181</li></ul>
-      
-      </nav>
-</body>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body>
+    <!-- <nav class="bg-gray-50 border-b border-gray-200">
+      <div class="py-2.5 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="h-4 flex gap-2 items-center justify-between">
+          <span
+            class="self-center text-xs whitespace-nowrap text-gray-500 grow overflow-hidden truncate mr-5"
+          >
+            THE MONGOLZ SHOP
+          </span>
+          <div
+            class="flex items-center justify-center gap-2 sm:gap-4 text-gray-700 shrink-0"
+          >
+            <a
+              href="/order"
+              class="flex items-center justify-center transition-colors group"
+            >
+              <span class="mr-1 text-gray-500 group-hover:text-neutral-700">
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+                  ></path>
+                </svg>
+              </span>
+              <span
+                class="hidden sm:block text-gray-600 group-hover:text-neutral-700 text-xs uppercase"
+              >
+                Захиалгын явц
+              </span>
+            </a>
+
+            <a href="tel:72444181" class="sm:hidden">
+              <span class="hover:text-neutral-700">
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+    <nav class="bg-gray-50 border-b border-gray-200">
+      <div class="py-2.5 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="h-4 flex gap-2 items-center justify-between">
+          <span
+            class="self-center text-xs whitespace-nowrap text-gray-500 grow overflow-hidden truncate mr-5"
+            >THE MONGOLZ SHOP</span
+          >
+          <div
+            class="flex items-center justify-center gap-2 sm:gap-4 text-gray-700 shrink-0"
+          >
+            <a
+              href="/order"
+              class="flex items-center justify-center transition-colors group"
+            >
+              <span class="mr-1 text-gray-500 group-hover:text-neutral-700"
+                ><svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+                  ></path>
+                </svg></span
+              ><span
+                class="hidden sm:block text-gray-600 group-hover:text-neutral-700 text-xs uppercase"
+                >ЗАХИАЛГЫН ЯВЦ</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="bg-white">
+      <div
+        class="flex items-center justify-between gap-4 md:gap-12 items-center mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-4 h-16 sm:h-24 lg:h-28"
+      >
+        <div class="flex gap-4 items-center justify-start grow overflow-hidden">
+          <a href="#">
+            <img
+              class="h-8 sm:h-12 lg:h-16 hover:opacity-80 transition-all"
+              src="https://kom-uploads.s3.amazonaws.com/store-1599/logo-1707837939.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="hidden sm:flex justify-center gap-6 items-center shrink-0">
+          <a
+            href="tel:72444181"
+            class="flex gap-3 justify-center items-center group"
+          >
+            <img
+              src="https://d2sucgbhjy7j1n.cloudfront.net/common/icons/phone.gif"
+              alt=""
+              class="w-8 hidden group-hover:block"
+            />
+            <img
+              src="https://d2sucgbhjy7j1n.cloudfront.net/common/icons/phone.png"
+              alt=""
+              class="w-8 block group-hover:hidden"
+              style="padding: 3px"
+            />
+            <div
+              class="flex flex-col items-start justify-center group max-w-40"
+            >
+              <p class="text-gray-600 font-semibold group-hover:text-gray-900">
+                72444181
+              </p>
+              <p class="text-gray-400 text-xs group-hover:text-gray-600">
+                Ажлын өдөр 09:00-18:00
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-neutral-600 h-12 sm:h-14">
+      <div class="flex items-center justify-between mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-full">
+        <div class="flex items-center gap-4">
+
+          <a href="#"  class="text-white hover:text-neutral-200 transition-colors">
+            <i class="ri-menu-line "></i>
+          </a>
+          <a href="#" class="text-white
+          hover:text-neutral-200 transition-colors"
+          >БҮХ БАРАА</a
+        >
+        <a href="#" class="text-white
+          hover:text-neutral-200 transition-colors"
+          >НИЙТЛЭЛҮҮД</a
+        >
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

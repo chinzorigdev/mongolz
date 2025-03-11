@@ -81,20 +81,42 @@
             <p class="tex-2xl">$$$$$$</p>
         </div>
     </div>
-    <div class="">
-        <h2>ЗЭЭЛ ТӨЛӨЛТИЙН ХУВААРЬ</h2>
-        <table class="table-auto">
-            <thead>
+
+    <!-- table -->
+
+    <h2 class="text-xl font-bold mb-4">Зээл төлөлтийн хуваарь</h2>
+    <div class="overflow-x-auto">
+        <table class="table-auto w-full border-collapse border border-gray-300">
+            <thead class="bg-gray-200">
                 <tr>
-                    <th>Сар</th>
-                    <th>Огноо</th>
-                    <th>Хоног</th>
-                    <th>Үндсэн зээлийн төлбөр</th>
-                    <th>Хүүгийн төлбөр</th>
-                    <th>Тэнцүү төлбөр</th>
-                    <th>Үндсэн зээлийн үлдэгдэл</th>
+                    <th class="border border-gray-300 px-4 py-2">Сар</th>
+                    <th class="border border-gray-300 px-4 py-2">Огноо</th>
+                    <th class="border border-gray-300 px-4 py-2">Хоног</th>
+                    <th class="border border-gray-300 px-4 py-2">Үндсэн зээлийн төлбөр</th>
+                    <th class="border border-gray-300 px-4 py-2">Хүүгийн төлбөр</th>
+                    <th class="border border-gray-300 px-4 py-2">Тэнцүү төлбөр</th>
+                    <th class="border border-gray-300 px-4 py-2">Үндсэн зээлийн үлдэгдэл</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">1</td>
+                    <td class="border border-gray-300 px-4 py-2">2025/04/11</td>
+                    <td class="border border-gray-300 px-4 py-2">31</td>
+                    <td class="border border-gray-300 px-4 py-2">399,148.72</td>
+                    <td class="border border-gray-300 px-4 py-2">38,219.18</td>
+                    <td class="border border-gray-300 px-4 py-2">437,367.90</td>
+                    <td class="border border-gray-300 px-4 py-2">4,600,851.00</td>
+                </tr>
+              
+                <tr class="bg-gray-100 font-bold">
+                    <td colspan="3" class="border border-gray-300 px-4 py-2 text-right">365</td>
+                    <td class="border border-gray-300 px-4 py-2">₮5,000,000</td>
+                    <td class="border border-gray-300 px-4 py-2">₮248,414.81</td>
+                    <td class="border border-gray-300 px-4 py-2">₮5,248,414</td>
+                    <td class="border border-gray-300 px-4 py-2"></td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <script>
@@ -105,7 +127,7 @@
             document.getElementById("total").innerText=amount+"₮";
             var month=document.getElementById("hugatsaa").value;
             var rate=document.getElementById("jiliinhuu").value;
-            // var total=amount*(1+rate/100)*month;
+            var total=amount*(1+rate/100)*month;
             document.getElementById("total").innerText=total+"₮";   
             
         }
