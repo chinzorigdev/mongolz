@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mongolz</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- AOS style ба script нэмэх -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+  </head>
+  <body>
+    <nav class="bg-gray-50 border-b border-gray-200">
+      <div class="py-2.5 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="h-4 flex gap-2 items-center justify-between">
+          <span
+            class="self-center text-xs whitespace-nowrap text-gray-500 grow overflow-hidden truncate mr-5"
+            >THE MONGOLZ SHOP</span
+          >
+
+          <div
+            class="flex items-center justify-center gap-2 sm:gap-4 text-gray-700 shrink-0"
+          >
+            <a
+              href="/order"
+              class="flex items-center justify-center transition-colors group"
+            >
+              <span class="mr-1 text-gray-500 group-hover:text-neutral-700"
+                ><svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+                  ></path></svg></span
+              ><span
+                class="hidden sm:block text-gray-600 group-hover:text-neutral-700 text-xs uppercase"
+                >ЗАХИАЛГЫН ЯВЦ</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="bg-white">
+      <div
+        class="flex items-center justify-between gap-4 md:gap-12 items-center mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-4 h-16 sm:h-24 lg:h-28"
+      >
+        <div class="flex gap-4 items-center justify-start grow overflow-hidden">
+          <a href="#">
+            <img
+              class="h-8 sm:h-12 lg:h-16 hover:opacity-80 transition-all"
+              src="https://kom-uploads.s3.amazonaws.com/store-1599/logo-1707837939.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="hidden sm:flex justify-center gap-6 items-center shrink-0">
+          <a
+            href="tel:72444181"
+            class="flex gap-3 justify-center items-center group"
+          >
+            <img
+              src="https://d2sucgbhjy7j1n.cloudfront.net/common/icons/phone.gif"
+              alt=""
+              class="w-8 hidden group-hover:block"
+            />
+            <img
+              src="https://d2sucgbhjy7j1n.cloudfront.net/common/icons/phone.png"
+              alt=""
+              class="w-8 block group-hover:hidden"
+              style="padding: 3px"
+            />
+            <div
+              class="flex flex-col items-start justify-center group max-w-40"
+            >
+              <p class="text-gray-600 font-semibold group-hover:text-gray-900">
+                72444181
+              </p>
+              <p class="text-gray-400 text-xs group-hover:text-gray-600">
+                Ажлын өдөр 09:00-18:00
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-neutral-600 h-12 sm:h-14">
+      <div
+        class="flex items-center justify-between mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-full"
+      >
+        <div class="flex items-center gap-4">
+          <a
+            href="#"
+            class="text-white hover:text-neutral-200 transition-colors"
+          >
+            <i class="ri-menu-line"></i>
+          </a>
+          <a
+            href="#"
+            class="text-white hover:text-neutral-200 transition-colors"
+            >БҮХ БАРАА</a
+          >
+          <a
+            href="#"
+            class="text-white hover:text-neutral-200 transition-colors"
+            >НИЙТЛЭЛҮҮД</a
+          >
+        </div>
+        <div>
+          <a
+            href="#"
+            class="text-white hover:text-neutral-200 transition-colors"
+          >
+            <i class="ri-search-line"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div data-product="" class="bg-white py-16">
+      <div class="max-w-5xl mx-auto px-4 md:px-8">
+        <div class="grid md:grid-cols-2 md:gap-12 lg:gap-20">
+          <!-- Бүтээгдэхүүний зураг -->
+          <div>
+            <div data-product-images="" class="flex flex-col gap-6">
+              <div
+                class="relative w-full aspect-square rounded-lg overflow-hidden border border-gray-300"
+              >
+                <img
+                  id="main-image"
+                  src="https://kom-uploads.s3.amazonaws.com/store-1599/product-17624--1733167005-w900.jpg"
+                  alt="The MongolZ - Pro Jersey 2025"
+                  class="w-full h-full object-contain transition-opacity duration-300 ease-in-out"
+                />
+              </div>
+              <div class="grid grid-cols-4 gap-4">
+                <button class="thumbnail-btn active border-2 border-indigo-500">
+                  <img
+                    src="https://kom-uploads.s3.amazonaws.com/store-1599/product-17624--1733167005-w400.jpg"
+                    alt="The MongolZ - Pro Jersey 2025"
+                    class="rounded-md object-cover border border-gray-300"
+                  />
+                </button>
+                <button class="thumbnail-btn border border-gray-300">
+                  <img
+                    src="https://kom-uploads.s3.amazonaws.com/store-1599/product-17624--1733167014-w400.jpg"
+                    alt="The MongolZ - Pro Jersey 2025"
+                    class="rounded-md object-cover"
+                  />
+                </button>
+                <button class="thumbnail-btn border border-gray-300">
+                  <img
+                    src="https://kom-uploads.s3.amazonaws.com/store-1599/product-17624--1733168200-w400.jpg"
+                    alt="The MongolZ - Pro Jersey 2025"
+                    class="rounded-md object-cover"
+                  />
+                </button>
+                <button class="thumbnail-btn border border-gray-300">
+                  <img
+                    src="https://kom-uploads.s3.amazonaws.com/store-1599/product-17624--1733167982-w400.jpg"
+                    alt="The MongolZ - Pro Jersey 2025"
+                    class="rounded-md object-cover"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Бүтээгдэхүүний мэдээлэл -->
+          <div class="space-y-6">
+            <h1 class="text-3xl font-extrabold tracking-tight text-gray-900">
+              The MongolZ - Pro Jersey 2025
+            </h1>
+            <p class="text-3xl text-neutral-600 font-bold">150,000₮</p>
+
+            <div class="text-gray-700">
+              <p>Official Jersey.</p>
+              <p class="italic text-sm text-gray-500">
+                Ази size учраас нэг size томруулж аваарай.
+              </p>
+            </div>
+
+            <!-- Өмсгөл дээр нэр бичүүлэх -->
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="name_on_jersey"
+                class="w-5 h-5 text-blue-600 border-gray-300 rounded"
+              />
+              <div>
+                <label for="name_on_jersey" class="font-medium text-gray-900">
+                  Өмсгөл дээр нэрээ бичүүлэх
+                </label>
+                <p class="text-sm text-gray-500">(17,000₮ нэмэгдэлтэй)</p>
+                <input
+                  type="text"
+                  id="input-name_on_jersey"
+                  class="mt-2 w-full max-w-md p-2.5 border rounded-lg text-sm bg-gray-100 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Өмсгөл дээрх нэр"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <!-- Хэмжээ сонгох -->
+            <div class="flex flex-wrap gap-2">
+              <a
+                href="#"
+                class="size-btn active bg-indigo-500 text-white border-2 border-indigo-500 px-5 py-2 rounded-md text-gray-700 font-medium uppercase transition hover:bg-indigo-500 hover:text-white hover:border-indigo-500"
+              >
+                XL
+              </a>
+              <a
+                href="#"
+                class="size-btn border-2 border-gray-300 px-5 py-2 rounded-md text-gray-700 font-medium uppercase transition hover:bg-indigo-500 hover:text-white hover:border-indigo-500"
+              >
+                2XL
+              </a>
+              <a
+                href="#"
+                class="size-btn border-2 border-gray-300 px-5 py-2 rounded-md text-gray-700 font-medium uppercase transition hover:bg-indigo-500 hover:text-white hover:border-indigo-500"
+              >
+                3XL
+              </a>
+              <a
+                href="#"
+                class="size-btn border-2 border-gray-300 px-5 py-2 rounded-md text-gray-700 font-medium uppercase transition hover:bg-indigo-500 hover:text-white hover:border-indigo-500"
+              >
+                5XL
+              </a>
+            </div>
+
+            <!-- Захиалах товч -->
+            <button
+              class="w-full max-w-xs py-3 px-8 bg-neutral-600 text-white text-base font-medium rounded-md shadow-md hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500 cursor-pointer"
+            >
+              Захиалах
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="border-t border-gray-200">
+      <div class="max-w-6xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+        <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
+          <div class="px-5 py-2">
+            <a
+              href="tel:72444181"
+              class="text-base text-gray-500 hover:text-gray-900"
+            >
+              Утас: 72444181</a
+            >
+          </div>
+        </nav>
+
+        <div class="mt-8 text-center text-base text-gray-400">
+          © 2022-2025 Дэлгүүрийн программыг
+          <a
+            href="https://kom.mn/"
+            target="_blank"
+            class="text-gray-500 hover:text-gray-900"
+            >kom.mn</a
+          >.
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Dropdown menu for size -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("[data-dropdown-toggle]").forEach((button) => {
+        button.addEventListener("click", function () {
+          let dropdownId = this.getAttribute("data-dropdown-toggle");
+          let dropdownMenu = document.getElementById(dropdownId);
+
+          if (dropdownMenu) {
+            dropdownMenu.classList.toggle("hidden");
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Zahialga hiih -->
+
+  <script>
+    // Thumbnail дээр дарахад үндсэн зураг өөрчлөгдөх
+    document.querySelectorAll(".thumbnail-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const mainImage = document.getElementById("main-image");
+        const newImageSrc = this.getAttribute("data-img");
+
+        // Өмнөх thumbnail-ийг идэвхгүй болгоно
+        document
+          .querySelectorAll(".thumbnail-btn")
+          .forEach((btn) =>
+            btn.classList.remove("border-2", "border-indigo-500")
+          );
+
+        // Шинэ зураг руу шилжих эффектийг өгнө
+        mainImage.style.opacity = "0";
+        setTimeout(() => {
+          mainImage.src = newImageSrc;
+          mainImage.style.opacity = "1";
+        }, 200);
+
+        // Идэвхтэй болгож хүрээ нэмэх
+        this.classList.add("border-2", "border-indigo-500");
+      });
+    });
+  </script>
+</html>
