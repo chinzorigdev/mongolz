@@ -3,315 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>news.mn</title>
+    <title>News.mn</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
-  <body>
-    <header class="bg-white shadow">
-      <!-- Mobile Menu -->
-      <div class="md:hidden">
-        <!-- Top Section -->
-        <div class="flex justify-between items-center p-4">
-          <div>
-            <a href="https://news.mn/">
+  <body class="min-h-screen">
+    <!-- Header -->
+    <header class="">
+      <div class="bg-red-500">
+        <div class="max-w-4xl mx-auto flex items-center justify-between py-4">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="#" class="block">
               <img
-                src="https://news.mn/wp-content/themes/newsmn/assets/images/footer-logo.svg"
-                alt="News.MN"
-                class="h-10"
-              />
-            </a>
-          </div>
-          <div>
-            <button class="text-2xl news-mobile-menu" aria-label="Toggle menu">
-              <i class="fas fa-bars"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Mobile Main Menu (hidden by default) -->
-        <div class="mobile-menu hidden">
-          <nav class="p-4">
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="https://news.mn/angilal/uls-tur/"
-                  class="block py-2 hover:text-blue-600"
-                  >Улс төр</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/angilal/ediin-zasag/"
-                  class="block py-2 hover:text-blue-600"
-                  >Эдийн засаг</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/angilal/niigem/"
-                  class="block py-2 hover:text-blue-600"
-                  >Нийгэм</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/angilal/delhii/"
-                  class="block py-2 hover:text-blue-600"
-                  >Дэлхий</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/angilal/sport/"
-                  class="block py-2 hover:text-blue-600"
-                  >Спорт</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/angilal/entertainment/"
-                  class="block py-2 hover:text-blue-600"
-                  >Энтертайнмент</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/angilal/shar-medee/"
-                  class="block py-2 hover:text-blue-600"
-                  >Шар мэдээ</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/angilal/video/"
-                  class="block py-2 hover:text-blue-600"
-                  >Видео</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Bulan Menu -->
-          <nav class="p-4 border-t">
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="https://news.mn/newsbrand/"
-                  class="block py-2 hover:text-blue-600"
-                  >News Brand</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/bulanguud/"
-                  class="block py-2 hover:text-blue-600"
-                  >Булангууд</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/tsogts-medee/"
-                  class="block py-2 hover:text-blue-600"
-                  >Цогц Мэдээ</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/archive/"
-                  class="block py-2 hover:text-blue-600"
-                  >Архив</a
-                >
-              </li>
-              <li>
-                <a href="/en/" class="block py-2 hover:text-blue-600"
-                  >English</a
-                >
-              </li>
-              <li>
-                <a href="/mng/" class="block py-2 hover:text-blue-600"
-                  >Монгол бичиг</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://news.mn/holboo-barih/"
-                  class="block py-2 hover:text-blue-600"
-                  >Холбоо барих</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Social Links -->
-          <div class="flex justify-center space-x-4 p-4 border-t">
-            <a href="https://www.messenger.com/t/news.mn.agency"
-              ><i class="fab fa-facebook-messenger text-xl"></i
-            ></a>
-            <a href="https://www.facebook.com/news.mn.agency"
-              ><i class="fab fa-facebook-square text-xl"></i
-            ></a>
-            <a href="https://twitter.com/home"
-              ><i class="fab fa-twitter text-xl"></i
-            ></a>
-            <a href="#"><i class="fas fa-rss-square text-xl"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desktop Layout -->
-      <div class="container mx-auto px-4">
-        <!-- Top Bar (visible on desktop) -->
-        <div class="hidden md:flex justify-between items-center py-4">
-          <div>
-            <a href="https://news.mn/">
-              <img
+                class="h-12 w-auto"
                 src="https://news.mn/wp-content/themes/newsmn/assets/images/logo.svg"
-                alt="News.MN"
-                class="h-12"
+                alt="News.mn"
               />
             </a>
           </div>
-          <div class="flex items-center space-x-6">
-            <!-- Social Icons -->
-            <div class="flex space-x-4">
-              <a href="https://www.messenger.com/t/news.mn.agency"
-                ><i class="fab fa-facebook-messenger text-xl"></i
-              ></a>
-              <a href="https://www.facebook.com/news.mn.agency"
-                ><i class="fab fa-facebook-square text-xl"></i
-              ></a>
-              <a href="https://twitter.com/home"
-                ><i class="fab fa-twitter text-xl"></i
-              ></a>
-              <a href="#"><i class="fas fa-rss-square text-xl"></i></a>
-            </div>
-            <!-- Search -->
-            <form method="get" action="https://news.mn/search/" class="flex">
+          <!-- Social -->
+          <div class="flex items-center space-x-4">
+            <a
+              href="https://www.messenger.com/t/news.mn.agency"
+              area-label="Messenger"
+              class="text-white hover:text-blue-500 text-xl"
+            >
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+
+            <a
+              href="https://www.facebook.com/news.mn.agency"
+              area-label="Facebook"
+              class="text-white hover:text-blue-500 text-xl"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+
+            <a
+              href="https://twitter.com/news_mn"
+              area-label="Twitter"
+              class="text-white hover:text-blue-500 text-xl"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <!-- Search -->
+          <div class="flex items-center">
+            <form
+              method="get"
+              action="https://news.mn/search"
+              class="flex items-center bg-white border border-gray-300 rounded-3xl overflow-hidden"
+            >
               <input
                 type="text"
-                name="q"
-                placeholder="Хайх..."
-                class="border rounded-l px-2 py-1"
+                placeholder="Хайх"
+                class="px-3 py-2 focus:outline-none"
               />
-              <button type="submit" class="bg-gray-200 px-2 rounded-r">
-                <i class="fa fa-search"></i>
+              <button type="submit" class="px-3 py-2">
+                <i class="fas fa-search"></i>
               </button>
             </form>
-            <!-- Extra Info (visible on large screens) -->
-            <div class="hidden lg:flex space-x-4">
-              <a href="https://news.mn/eastern" class="flex flex-col">
-                <span>Зурхай</span>
-                <span class="text-sm">2025/03/13</span>
-              </a>
-              <a href="https://news.mn/exchange" class="flex flex-col">
-                <span>Доллар (USD)</span>
-                <span class="text-sm">3,467.49</span>
-              </a>
-              <a href="https://news.mn/weather" class="flex flex-col">
-                <span>Улаанбаатар</span>
-                <span class="text-sm">+9°C</span>
-              </a>
-            </div>
+          </div>
+          <!-- Нэмэлт мэдээллийн хэсэг -->
+          <div class="flex items-center space-x-4">
+            <a href="#" class="flex flex-col items-center text-white text-sm">
+              <p class="uppercase">Зурхай</p>
+              <span class="font-bold">2015/03-13</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-white text-sm">
+              <p class="uppercase">Доллар (USD)</p>
+              <span class="font-bold">3500</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-white text-sm">
+              <p class="uppercase">Улаанбаатар</p>
+              <span class="font-bold">+9</span>
+            </a>
           </div>
         </div>
-
-        <!-- Main Navigation -->
-        <nav class="hidden md:flex justify-between border-t py-4">
-          <ul class="flex space-x-6">
-            <li>
-              <a
-                href="https://news.mn/"
-                class="flex items-center hover:text-blue-600"
-                ><i class="fas fa-home mr-1"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/uls-tur/"
-                class="hover:text-blue-600"
-                >Улс төр</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/ediin-zasag/"
-                class="hover:text-blue-600"
-                >Эдийн засаг</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/niigem/"
-                class="hover:text-blue-600"
-                >Нийгэм</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/delhii/"
-                class="hover:text-blue-600"
-                >Дэлхий</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/sport/"
-                class="hover:text-blue-600"
-                >Спорт</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/entertainment/"
-                class="hover:text-blue-600"
-                >Энтертайнмент</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/shar-medee/"
-                class="hover:text-blue-600"
-                >Шар мэдээ</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/angilal/video/"
-                class="hover:text-blue-600"
-                >Видео</a
-              >
-            </li>
-          </ul>
-          <ul class="flex space-x-6">
-            <li>
-              <a href="https://news.mn/newsbrand/" class="hover:text-blue-600"
-                >News Brand</a
-              >
-            </li>
-            <li>
-              <a href="https://news.mn/bulanguud/" class="hover:text-blue-600"
-                >Булангууд</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://news.mn/tsogts-medee/"
-                class="hover:text-blue-600"
-                >Цогц Мэдээ</a
-              >
-            </li>
-            <li>
-              <a href="https://news.mn/archive/" class="hover:text-blue-600"
-                >Архив</a
-              >
-            </li>
-            <li>
-              <a href="/mng/" class="hover:text-blue-600">Монгол бичиг</a>
-            </li>
-            <li><a href="/en/" class="hover:text-blue-600">English</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
+    <nav class="bg-blue-500 text-white">
+      <div class="max-w-4xl mx-auto flex items-center justify-between py-4">
+        <div>
+          <a href="#">
+            <i class="fa-solid fa-house"></i>
+          </a>
+          <a href="#">УЛС ТӨР</a>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
