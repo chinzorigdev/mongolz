@@ -12,77 +12,69 @@
   </head>
   <body class="min-h-screen">
     <!-- Header -->
-    <header class="">
-      <div class="bg-red-500">
-        <div class="max-w-6xl mx-auto flex items-center justify-between py-6">
-          <!-- Logo -->
-          <div class="flex items-center">
-            <a href="#" class="block">
-              <img
-                class="h-12 w-auto"
-                src="https://news.mn/wp-content/themes/newsmn/assets/images/logo.svg"
-                alt="News.mn"
-              />
-            </a>
-          </div>
-          <!-- Social -->
-          <div class="flex items-center space-x-4">
-            <a
-              href="https://www.messenger.com/t/news.mn.agency"
-              area-label="Messenger"
-              class="text-white hover:text-blue-500 text-xl"
-            >
-              <i class="fab fa-facebook-messenger"></i>
-            </a>
-
-            <a
-              href="https://www.facebook.com/news.mn.agency"
-              area-label="Facebook"
-              class="text-white hover:text-blue-500 text-xl"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-
-            <a
-              href="https://twitter.com/news_mn"
-              area-label="Twitter"
-              class="text-white hover:text-blue-500 text-xl"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-          <!-- Search -->
-          <div class="flex items-center">
-            <form
-              method="get"
-              action="https://news.mn/search"
-              class="flex items-center bg-white border border-gray-300 rounded-3xl overflow-hidden"
-            >
-              <input
-                type="text"
-                placeholder="Хайх"
-                class="px-3 py-2 focus:outline-none"
-              />
-              <button type="submit" class="px-3 py-2">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-          </div>
-          <!-- Нэмэлт мэдээллийн хэсэг -->
-          <div class="flex items-center space-x-4">
-            <a href="#" class="flex flex-col items-center text-white text-sm">
-              <p class="uppercase">Зурхай</p>
-              <span class="font-bold">2015/03-13</span>
-            </a>
-            <a href="#" class="flex flex-col items-center text-white text-sm">
-              <p class="uppercase">Доллар (USD)</p>
-              <span class="font-bold">3500</span>
-            </a>
-            <a href="#" class="flex flex-col items-center text-white text-sm">
-              <p class="uppercase">Улаанбаатар</p>
-              <span class="font-bold">+9</span>
-            </a>
-          </div>
+    <header class="bg-red-500">
+      <div class="max-w-6xl mx-auto flex items-center justify-between py-6">
+        <!-- Logo -->
+        <a href="#" class="block">
+          <img
+            class="h-12 w-auto"
+            src="https://news.mn/wp-content/themes/newsmn/assets/images/logo.svg"
+            alt="News.mn"
+          />
+        </a>
+        <!-- Social -->
+        <div class="flex items-center space-x-4">
+          <a
+            href="https://www.messenger.com/t/news.mn.agency"
+            aria-label="Messenger"
+            class="text-white hover:text-blue-500 text-xl"
+          >
+            <i class="fab fa-facebook-messenger"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/news.mn.agency"
+            aria-label="Facebook"
+            class="text-white hover:text-blue-500 text-xl"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://twitter.com/news_mn"
+            aria-label="Twitter"
+            class="text-white hover:text-blue-500 text-xl"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <!-- Search -->
+        <form
+          method="get"
+          action="https://news.mn/search"
+          class="flex items-center bg-white border border-gray-300 rounded-3xl overflow-hidden"
+        >
+          <input
+            type="text"
+            placeholder="Хайх"
+            class="px-3 py-2 focus:outline-none"
+          />
+          <button type="submit" class="px-3 py-2">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <!-- Additional Info -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="flex flex-col items-center text-white text-sm">
+            <p class="uppercase">Зурхай</p>
+            <span class="font-bold">2015/03-13</span>
+          </a>
+          <a href="#" class="flex flex-col items-center text-white text-sm">
+            <p class="uppercase">Доллар (USD)</p>
+            <span class="font-bold">3500</span>
+          </a>
+          <a href="#" class="flex flex-col items-center text-white text-sm">
+            <p class="uppercase">Улаанбаатар</p>
+            <span class="font-bold">+9</span>
+          </a>
         </div>
       </div>
     </header>
@@ -93,55 +85,208 @@
             <i class="fa-solid fa-house"></i>
           </a>
           <ul class="flex items-center space-x-4">
-            <li>
-              <a href="#">УЛС ТӨР</a>
-            </li>
-            <li>
-              <a href="#">ЭДИЙН ЗАСАГ</a>
-            </li>
-            <li>
-              <a href="#">НИЙГЭМ</a>
-            </li>
-            <li>
-              <a href="#">ДЭЛХИЙ</a>
-            </li>
-            <li>
-              <a href="#">СПОРТ</a>
-            </li>
-            <li>
-              <a href="#">ЭНТЕРТАЙНМЕНТ</a>
-            </li>
-            <li>
-              <a href="#">ШАР МЭДЭЭ</a>
-            </li>
-            <li>
-              <a href="#">ВИДЕО</a>
-            </li>
+            <li><a href="#">УЛС ТӨР</a></li>
+            <li><a href="#">ЭДИЙН ЗАСАГ</a></li>
+            <li><a href="#">НИЙГЭМ</a></li>
+            <li><a href="#">ДЭЛХИЙ</a></li>
+            <li><a href="#">СПОРТ</a></li>
+            <li><a href="#">ЭНТЕРТАЙНМЕНТ</a></li>
+            <li><a href="#">ШАР МЭДЭЭ</a></li>
+            <li><a href="#">ВИДЕО</a></li>
           </ul>
         </div>
-        <div class="">
-          <ul class="flex items-center space-x-4 text-xs">
-            <li>
-              <a href="#">NEWS BRAND</a>
-            </li>
-            <li>
-              <a href="#">БУЛАНГУУД</a>
-            </li>
-            <li>
-              <a href="#">ЦОГЦ МЭДЭЭ</a>
-            </li>
-            <li>
-              <a href="#">АРХИВ</a>
-            </li>
-            <li>
-              <a href="#">МОНГОЛ БИЧИГ</a>
-            </li>
-            <li>
-              <a href="#">ENGLISH</a>
-            </li>
-          </ul>
+        <div class="flex items-center space-x-4 text-xs">
+          <li><a href="#">NEWS BRAND</a></li>
+          <li><a href="#">БУЛАНГУУД</a></li>
+          <li><a href="#">ЦОГЦ МЭДЭЭ</a></li>
+          <li><a href="#">АРХИВ</a></li>
+          <li><a href="#">МОНГОЛ БИЧИГ</a></li>
+          <li><a href="#">ENGLISH</a></li>
         </div>
       </div>
     </nav>
+    <!-- Banner -->
+    <section class="">
+      <div class="relative w-full max-w-5xl mx-auto overflow-hidden py-4">
+        <!-- Slider container -->
+        <div
+          id="slider"
+          class="flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0">
+            <a
+              href="https://www.koreanair.com/contents/promotion/list/2025/ubnskypass"
+              target="_blank"
+              rel="noopener"
+            >
+              <video
+                playsinline
+                poster="https://news.mn/wp-content/uploads/2025/02/4ae93c77-93ae-4d5b-82b9-8601f2322688.jpg"
+                class="w-full h-auto"
+              ></video>
+            </a>
+          </div>
+          <!-- Slide 2 -->
+          <div class="w-full flex-shrink-0">
+            <a href="#" target="_blank" rel="noopener">
+              <video
+                playsinline
+                poster="https://news.mn/wp-content/uploads/2025/02/golomt.jpg"
+                class="w-full h-auto"
+              ></video>
+            </a>
+          </div>
+          <!-- Slide 3 -->
+          <div class="w-full flex-shrink-0">
+            <a href="#" target="_blank" rel="noopener">
+              <video
+                playsinline
+                poster="https://news.mn/wp-content/uploads/2025/03/1100-100-news.png"
+                class="w-full h-auto"
+              ></video>
+            </a>
+          </div>
+          <!-- Slide 4 -->
+          <div class="w-full flex-shrink-0">
+            <a href="#" target="_blank" rel="noopener">
+              <video
+                playsinline
+                poster="https://news.mn/wp-content/uploads/2025/03/728x90-N1-eguur.jpg"
+                class="w-full h-auto"
+              ></video>
+            </a>
+          </div>
+        </div>
+        <!-- Dots Navigation -->
+        <div
+          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+        >
+          <span
+            class="dot w-3 h-3 bg-blue-500 rounded-full cursor-pointer"
+            data-index="0"
+          ></span>
+          <span
+            class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+            data-index="1"
+          ></span>
+          <span
+            class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+            data-index="2"
+          ></span>
+          <span
+            class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"
+            data-index="3"
+          ></span>
+        </div>
+      </div>
+    </section>
+    <!-- Гарагууд -->
+    <div class="mt-6">
+      <div class="max-w-6xl mx-auto">
+        <ul class="flex flex-wrap justify-center gap-4 border-b pb-2 text-xs">
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 border-b-2 border-blue-500 text-blue-500 font-semibold"
+            >
+              <span class="hidden md:inline">Пүрэв</span> 2025-03-13
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 text-gray-600 hover:text-blue-500 transition duration-200"
+            >
+              <span class="hidden md:inline">Лхагва</span> 2025-03-12
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 text-gray-600 hover:text-blue-500 transition duration-200"
+            >
+              <span class="hidden md:inline">Мягмар</span> 2025-03-11
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 text-gray-600 hover:text-blue-500 transition duration-200"
+            >
+              <span class="hidden md:inline">Даваа</span> 2025-03-10
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 text-gray-600 hover:text-blue-500 transition duration-200"
+            >
+              <span class="hidden md:inline">Ням</span> 2025-03-09
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 text-gray-600 hover:text-blue-500 transition duration-200"
+            >
+              <span class="hidden md:inline">Бямба</span> 2025-03-08
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 text-gray-600 hover:text-blue-500 transition duration-200"
+            >
+              <span class="hidden md:inline">Баасан</span> 2025-03-07
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- main news -->
+    <section>
+      <div class="max-w-6xl max-h-5xl mx-auto bg-blue-500 grid grid-cols-2 gap-4 px-4 py-6">
+        <div class="">
+          <h1>Section 1</h1>
+        </div>
+        <div>
+          <h1>Section 2</h1>
+      </div>
+    </section>
   </body>
+
+  <!-- Slider -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slider = document.getElementById("slider");
+      const dots = document.querySelectorAll(".dot");
+      let currentIndex = 0;
+      const totalSlides = slider.children.length;
+
+      function updateSlider(index) {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("bg-blue-500", i === index);
+          dot.classList.toggle("bg-gray-400", i !== index);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider(currentIndex);
+      }
+
+      let slideInterval = setInterval(nextSlide, 5000);
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          currentIndex = parseInt(dot.dataset.index);
+          updateSlider(currentIndex);
+          clearInterval(slideInterval);
+          slideInterval = setInterval(nextSlide, 5000);
+        });
+      });
+    });
+  </script>
 </html>
