@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Layout with Tailwind CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Зүүн багана -->
+      <div class="col-span-2 space-y-4">
+        <!-- Дээд хэсэг: Том мэдээ ба жижиг мэдээнүүд -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Том мэдээ (2/3) -->
+          <div class="md:col-span-2 bg-white p-4 rounded shadow">
+            <img
+              src="https://news.mn/wp-content/uploads/2025/03/d45f2a84-a5a9-49ce-8965-f8d2ba095b23-530x330.jpg"
+              alt="Main News"
+              class="w-full h-48 object-cover rounded"
+            />
+            <h1 class="mt-2 text-xl font-bold">
+              <a href="#">Эзнээ олсон ч цагаа олоогүй MVP шагнал</a>
+            </h1>
+            <p class="mt-2 text-gray-600">
+              Нийт долоон шагналын эзэд өнөөдөр тодорсон бөгөөд...
+            </p>
+          </div>
+          <!-- Жижиг мэдээнүүд (1/3) -->
+          <div class="space-y-4">
+            <div class="bg-white p-4 rounded shadow">
+              <img
+                src="https://news.mn/wp-content/uploads/2025/03/image_l-250x156.jpg"
+                alt="Small News 1"
+                class="w-full h-24 object-cover rounded"
+              />
+              <h1 class="mt-2 text-lg font-bold">
+                <a href="#">"Их-7" Украин, Хятадын асуудлыг хэлэлцэв</a>
+              </h1>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+              <img
+                src="https://news.mn/wp-content/uploads/2025/03/462240046_565774342498071_6852921746297244639_n-810x500-1-1-1-1-250x156.jpg"
+                alt="Small News 2"
+                class="w-full h-24 object-cover rounded"
+              />
+              <h1 class="mt-2 text-lg font-bold">
+                <a href="#">А.Ганхуяг: Улсын мөнгөөр өр төлбөрөө дараагүй</a>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Хуваагч -->
+        <div class="border-t border-gray-300 my-4"></div>
+
+        <!-- Доод хэсэг: Жижиг мэдээнүүдийн grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded shadow">
+            <img
+              src="https://news.mn/wp-content/uploads/2018/12/emneleg-1-250x156.png"
+              alt="News 1"
+              class="w-full h-24 object-cover rounded"
+            />
+            <h1 class="mt-2 text-lg font-bold">
+              <a href="#"
+                >ЭМЯ: Орон нутгийн хүүхдийн эрт илрүүлэг ирэх сард эхэлнэ</a
+              >
+            </h1>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <img
+              src="https://news.mn/wp-content/uploads/2025/03/PYH2025031211440006000_P4-250x156.jpg"
+              alt="News 2"
+              class="w-full h-24 object-cover rounded"
+            />
+            <h1 class="mt-2 text-lg font-bold">
+              <a href="#"
+                >Хариуцлагагүй байдал гаргасан нисгэгчдийг яллагдагчаар татав</a
+              >
+            </h1>
+          </div>
+          <div class="bg-white p-4 rounded shadow">
+            <img
+              src="https://news.mn/wp-content/uploads/2025/03/1072-580x365-1-250x156.jpg"
+              alt="News 3"
+              class="w-full h-24 object-cover rounded"
+            />
+            <h1 class="mt-2 text-lg font-bold">
+              <a href="#"
+                >Хувьцааны ногдол ашгаа аваагүй 80 мянган иргэн байна</a
+              >
+            </h1>
+          </div>
+          <!-- Илүү олон мэдээ нэмж болно -->
+        </div>
+      </div>
+
+      <!-- Баруун багана -->
+      <div class="col-span-1 space-y-4">
+        <!-- Баннер -->
+        <div class="bg-gray-200 p-4 rounded shadow">
+          <img
+            src="https://news.mn/wp-content/uploads/2025/03/News-300x250-1.jpg"
+            alt="Banner"
+            class="w-full h-48 object-cover rounded"
+          />
+        </div>
+
+        <!-- Шинэ мэдээ -->
+        <div class="bg-white p-4 rounded shadow">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Шинэ мэдээ</h2>
+            <div class="flex space-x-2">
+              <a href="#" class="text-gray-600 hover:text-blue-500"
+                ><i class="fas fa-clock"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-blue-500"
+                ><i class="fas fa-eye"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-blue-500"
+                ><i class="fas fa-comment-dots"></i
+              ></a>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex space-x-4">
+              <img
+                src="https://news.mn/wp-content/uploads/2024/11/tsagdaa-180x113.jpg"
+                alt="Latest News 1"
+                class="w-20 h-12 object-cover rounded"
+              />
+              <div>
+                <h1 class="text-sm font-bold">
+                  <a href="#"
+                    >ЦЕГ: Гражид байрлуулсан машинаас эд зүйл алдагдаж байна</a
+                  >
+                </h1>
+                <p class="text-xs text-gray-500">
+                  <i class="far fa-clock"></i> 27 минутын өмнө
+                </p>
+              </div>
+            </div>
+            <div class="flex space-x-4">
+              <img
+                src="https://news.mn/wp-content/uploads/2025/03/batchuluun-810x500-1-1-180x113.png"
+                alt="Latest News 2"
+                class="w-20 h-12 object-cover rounded"
+              />
+              <div>
+                <h1 class="text-sm font-bold">
+                  <a href="#">П.Батчулуун эмчид оноосон ялыг хэвээр үлдээлээ</a>
+                </h1>
+                <p class="text-xs text-gray-500">
+                  <i class="far fa-clock"></i> 48 минутын өмнө
+                </p>
+              </div>
+            </div>
+            <!-- Илүү олон мэдээ нэмж болно -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
