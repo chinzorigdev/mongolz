@@ -12,7 +12,7 @@
   </head>
   <body class="min-h-screen">
     <!-- Header -->
-    <header class="bg-red-500 text-xs">
+    <header class="bg-red-500 text-xs px-4">
       <div class="max-w-6xl mx-auto flex items-center justify-between py-6">
         <!-- Logo -->
         <a href="#" class="block">
@@ -78,7 +78,7 @@
         </div>
       </div>
     </header>
-    <nav class="bg-blue-500 text-white">
+    <nav class="bg-blue-500 text-white px-4">
       <div class="max-w-6xl mx-auto flex items-center justify-between py-4">
         <div class="flex items-center space-x-4 text-xs">
           <a href="#">
@@ -106,7 +106,7 @@
       </div>
     </nav>
     <!-- Banner -->
-    <section class="">
+    <section class="px-4">
       <div class="relative w-full max-w-5xl mx-auto overflow-hidden py-4">
         <!-- Slider container -->
         <div
@@ -182,7 +182,7 @@
       </div>
     </section>
     <!-- Гарагууд -->
-    <div class="mt-6">
+    <div class="mt-6 px-4">
       <div class="max-w-6xl mx-auto">
         <ul class="flex flex-wrap justify-center gap-4 border-b pb-2 text-xs">
           <li>
@@ -245,7 +245,9 @@
       </div>
     </div>
     <!-- main news -->
-    <div class="max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div
+      class="max-w-6xl mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-6 px-4"
+    >
       <!-- Зүүн багана -->
       <section class="col-span-2 space-y-6">
         <!-- Дээд хэсэг: Том мэдээ ба жижиг мэдээнүүд -->
@@ -255,7 +257,7 @@
             <img
               src="https://news.mn/wp-content/uploads/2025/03/d45f2a84-a5a9-49ce-8965-f8d2ba095b23-530x330.jpg"
               alt="Эзнээ олсон ч цагаа олоогүй MVP шагнал"
-              class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
+              class="w-full h-70 object-cover transition-transform duration-300 hover:scale-105"
             />
             <div class="p-4 pb-0 pl-0">
               <h1 class="text-xl font-bold mb-2 hover:text-red-500">
@@ -276,7 +278,7 @@
               <img
                 src="https://news.mn/wp-content/uploads/2025/03/image_l-250x156.jpg"
                 alt="small news"
-                class="w-full h-28 object-cover transition-transform duration-300 hover:scale-105"
+                class="w-full h-39 object-cover transition-transform duration-300 hover:scale-105"
               />
               <div class="pb-0 pl-0 py-2">
                 <h2
@@ -291,7 +293,7 @@
               <img
                 src="https://news.mn/wp-content/uploads/2025/03/462240046_565774342498071_6852921746297244639_n-810x500-1-1-1-1-250x156.jpg"
                 alt="А.Ганхуяг: Улсын мөнгөөр өр төлбөрөө дараагүй"
-                class="w-full h-28 object-cover transition-transform duration-300 hover:scale-105"
+                class="w-full h-39 object-cover transition-transform duration-300 hover:scale-105"
               />
               <div class="py-4">
                 <h2
@@ -512,8 +514,245 @@
             ></button>
           </div>
         </div>
+        <!-- Шинэ их үзсэн Их сэтгэгдэлтэй -->
+        <div>
+          <!-- Header section -->
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-gray-800">
+              <a
+                href="#"
+                class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >Шинэ мэдээ</a
+              >
+            </h2>
+            <ul class="flex space-x-4">
+              <li>
+                <a
+                  href="#"
+                  data-type="latest"
+                  class="text-gray-500 hover:text-blue-600 active:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                >
+                  <i class="fas fa-clock"></i>
+                  <span class="sr-only">Шинэ</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  data-type="most"
+                  class="text-gray-500 hover:text-blue-600 active:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                >
+                  <i class="fas fa-fire"></i>
+                  <span class="sr-only">Их үзсэн</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  data-type="commented"
+                  class="text-gray-500 hover:text-blue-600 active:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                >
+                  <i class="fas fa-comment"></i>
+                  <span class="sr-only">Их сэтгэгдэлтэй</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <hr class="text-gray-200 my-4" />
+
+          <!-- Blog Posts -->
+          <div class="space-y-4">
+            <!-- Article Component -->
+            <article class="flex flex-col sm:flex-row items-start gap-4">
+              <div class="flex-1 space-y-4 text-base">
+                <h3 class="font-semibold text-gray-800 leading-snug">
+                  <a href="#">Туулын хурдны замын тендер нээлтийг хойшлуулав</a>
+                </h3>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <span>3 цагийн өмнө</span>
+                </div>
+                <hr class="text-gray-200" />
+              </div>
+            </article>
+            <!-- article 2 -->
+            <article class="flex flex-col sm:flex-row items-start gap-4">
+              <div class="flex-1 space-y-4 text-base">
+                <h3 class="font-semibold text-gray-800 leading-snug">
+                  <a href="#">Туулын хурдны замын тендер нээлтийг хойшлуулав</a>
+                </h3>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <span>3 цагийн өмнө</span>
+                </div>
+                <hr class="text-gray-200" />
+              </div>
+            </article>
+            <!-- article 3 -->
+            <article class="flex flex-col sm:flex-row items-start gap-4">
+              <div class="flex-1 space-y-4 text-base">
+                <h3 class="font-semibold text-gray-800 leading-snug">
+                  <a href="#">Туулын хурдны замын тендер нээлтийг хойшлуулав</a>
+                </h3>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <span>3 цагийн өмнө</span>
+                </div>
+                <hr class="text-gray-200" />
+              </div>
+            </article>
+            <!-- article 4 -->
+            <article class="flex flex-col sm:flex-row items-start gap-4">
+              <div class="flex-1 space-y-4 text-base">
+                <h3 class="font-semibold text-gray-800 leading-snug">
+                  <a href="#">Туулын хурдны замын тендер нээлтийг хойшлуулав</a>
+                </h3>
+                <div>
+                  <i class="fas fa-clock"></i>
+                  <span>3 цагийн өмнө</span>
+                </div>
+                <hr class="text-gray-200" />
+              </div>
+            </article>
+          </div>
+        </div>
       </aside>
     </div>
+    <!-- Редакцийн сонгол -->
+    <section class="px-4">
+      <hr class="border-t font-bold border-red-500" />
+      <div class="max-w-6xl mx-auto py-4">
+        <!-- Section title -->
+        <div class="mb-4">
+          <a href="#" class="text-xl uppercase font-semibold text-red-500"
+            >Редакцийн сонголт</a
+          >
+        </div>
+        <hr class="border-t border-gray-300 mb-4" />
+        <!-- Article Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Article 1 -->
+          <article class="">
+            <div>
+              <h2 class="text-sm uppercase mb-3">
+                <a href="#"
+                  >"Зөвшөөрөлгүй хашаа, хайс барьвал хуулийн хариуцлага
+                  хүлээлгэдэг"</a
+                >
+              </h2>
+              <div class="text-gray-600 text-xs leading-relaxed">
+                Иргэн, аж ахуйн нэгж байгууллагууд хашаа, хайс, орон сууцны
+                хорооллын хаалтыг зөвшөөрөлгүйгээр дур мэдэн баривал хуулийн
+              </div>
+            </div>
+            <!-- Author info -->
+            <div class="flex items-center mt-4">
+              <img
+                src="https://news.mn/wp-content/uploads/2024/04/Erdenezaya-150x150.png"
+                alt="publisher"
+                class="w-12 h-12 rounded-full object-cover mr-3"
+              />
+              <div>
+                <h6 class="text-sm font-medium text-gray-800">Б Эрдэнэзаяа</h6>
+                <p class="text-xs text-gray-500">Сэтгүүлч</p>
+              </div>
+            </div>
+          </article>
+          <!-- Article 2 -->
+          <article class="">
+            <div>
+              <h2 class="text-sm uppercase mb-3">
+                <a href="#">
+                  Фото сурвалжлага: Зөв хүний үйлдэл нүднээс далд ч зөв!
+                </a>
+              </h2>
+              <div class="text-gray-600 text-xs leading-relaxed">
+                Халдвар хамгааллын хамгийн сайн сахих ёстой газар бол эмнэлэг.
+                Гэвч бодит байдал дээр тийм биш байгааг үйлчлүүлж буй иргэд хэлж
+                байгаа юм...
+              </div>
+            </div>
+            <!-- Author info -->
+            <div class="flex items-center mt-4">
+              <img
+                src="https://news.mn/wp-content/uploads/2023/09/379619496_255126200834491_3361310673099903724_n-150x150.png"
+                alt="publisher"
+                class="w-12 h-12 rounded-full object-cover mr-3"
+              />
+              <div>
+                <h6 class="text-sm font-medium text-gray-800">
+                  Олзод Болорсувд
+                </h6>
+                <p class="text-xs text-gray-500">Сэтгүүлч</p>
+              </div>
+            </div>
+          </article>
+          <!-- Article 3 -->
+          <article class="">
+            <div>
+              <h2 class="text-sm uppercase mb-3">
+                <a href="#">Харшил бүрэн эдгэдэггүй, хүндэрвэл астма болдог</a>
+              </h2>
+              <div class="text-gray-600 text-xs leading-relaxed">
+                Харшил нь дэлхий нийтийг хамарсан чимээгүй тахал болж хүн амын
+                эрүүл мэндийн аюулгүй байдалд томоохон асуудал болсоор удаж
+                буй...
+              </div>
+            </div>
+            <!-- Author info -->
+            <div class="flex items-center mt-4">
+              <img
+                src="https://news.mn/wp-content/uploads/2022/02/273964652_209443668038558_620846565825952855_n-150x150.png"
+                alt="publisher"
+                class="w-12 h-12 rounded-full object-cover mr-3"
+              />
+              <div>
+                <h6 class="text-sm font-medium text-gray-800">Б. Нарантуяа</h6>
+                <p class="text-xs text-gray-500">Сэтгүүлч</p>
+              </div>
+            </div>
+          </article>
+          <!-- Article 4 -->
+          <article class="">
+            <div>
+              <h2 class="text-sm uppercase mb-3">
+                <a href="#">
+                  "Зөвшөөрөлгүй хашаа, хайс барьвал хуулийн хариуцлага
+                  хүлээлгэдэг"</a
+                >
+              </h2>
+              <div class="text-gray-600 text-xs leading-relaxed">
+                Иргэн, аж ахуйн нэгж байгууллагууд хашаа, хайс, орон сууцны
+                хорооллын хаалтыг зөвшөөрөлгүйгээр дур мэдэн баривал хуулийн
+              </div>
+            </div>
+            <!-- Author info -->
+            <div class="flex items-center mt-4">
+              <img
+                src="https://news.mn/wp-content/uploads/2024/04/Erdenezaya-150x150.png"
+                alt="publisher"
+                class="w-12 h-12 rounded-full object-cover mr-3"
+              />
+              <div>
+                <h6 class="text-sm font-medium text-gray-800">Б Эрдэнэзаяа</h6>
+                <p class="text-xs text-gray-500">Сэтгүүлч</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Дэлхий -->
+    <section class="px-4">
+      <div>
+        <!-- Зүүн тал -->
+        <div>
+          <hr class="border-t font-bold border-red-500" />
+          <div class="text-xs uppercase">Дэлхий</div>
+        </div>
+      </div>
+    </section>
   </body>
 
   <!-- Slider -->
