@@ -13,7 +13,7 @@
   <body class="min-h-screen">
     <!-- Header -->
     <header class="bg-red-500 text-xs px-4">
-      <div class="max-w-6xl mx-auto flex items-center justify-between py-6">
+      <div class="max-w-6xl mx-auto flex items-center justify-between py-4">
         <!-- Logo -->
         <a href="#" class="block">
           <img
@@ -79,8 +79,10 @@
       </div>
     </header>
     <nav class="bg-blue-500 text-white px-4">
-      <div class="max-w-6xl mx-auto flex items-center justify-between py-4">
-        <div class="flex items-center space-x-4 text-xs">
+      <div
+        class="max-w-6xl mx-auto flex items-center justify-between py-2 text-xs font-thin"
+      >
+        <div class="flex items-center space-x-4">
           <a href="#">
             <i class="fa-solid fa-house"></i>
           </a>
@@ -251,7 +253,7 @@
       <!-- Зүүн багана -->
       <section class="col-span-2 space-y-6">
         <!-- Дээд хэсэг: Том мэдээ ба жижиг мэдээнүүд -->
-        <div class="grid gird-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <!-- Том мэдээнүүд -->
           <article class="md:col-span-2 bg-white overflow-hidden">
             <img
@@ -619,7 +621,7 @@
         </div>
       </aside>
     </div>
-    <!-- Редакцийн сонгол -->
+    <!-- Редакцийн сонголт -->
     <section class="px-4">
       <hr class="border-t font-bold border-red-500" />
       <div class="max-w-6xl mx-auto py-4">
@@ -744,14 +746,50 @@
       </div>
     </section>
     <!-- Дэлхий -->
-    <section class="px-4">
-      <div class="max-w-6xl mx-auto py-4">
-        <!-- Зүүн тал -->
-        <div>
+    <section
+      class="max-w-6xl mx-auto py-4 grid grid-cols-1 md:grid-cols-3 gap-6 px-4"
+    >
+      <!-- Зүүн тал -->
+      <div class="col-span-1 md:col-span-2">
+        <article>
           <hr class="border-t font-bold border-red-500" />
-          <div class="text-xs uppercase">Дэлхий</div>
-        </div>
+          <div>
+            <hr class="border-t font-bold border-red-500" />
+            <div class="text-sm uppercase font-semibold text-red-500 py-4">
+              Дэлхий
+            </div>
+            <hr class="border-t border-gray-300" />
+          </div>
+          <!-- Жижиг том мэдээнүүд -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <div class="text-sm uppercase font-semibold text-gray-800 py-4">
+              
+                Путин Курск дэх украинчуудын амийг өршөөх болзлоо илэрхийлэв
+              </div>
+              <p class="text-xs text-gray-600 ">АНУ-ын зуучилж буй гал зогсоох хэлэлцээрийн талаар дипломат хэлэлцээ явагдаж байгаа энэ үед Оросын ерөнхийлөгч Владимир Путин Курск мужид нэвтэрсэн украин цэргүүдийг бууж өгөхийг уриалав. Тодруулбал, тухайн цэргүүд
+  
+              </p>
+            </div>
+            <div class="">
+              <a href="#">
+                <img src="https://news.mn/wp-content/uploads/2025/03/OIP-2025-03-15T115317.383-370x230.jpg" alt="photo" class="w-full h-40 object-cover " />
+              </a>
+            </div>
+              
+            </div>
+          </div>
+        </article>
       </div>
+      <!-- Баруун тал -->
+      <aside>
+        <div class="space-y-6">
+          <div>
+            <hr class="border-t font-bold border-red-500" />
+            <div class="text-xs uppercase">Aside</div>
+          </div>
+        </div>
+      </aside>
     </section>
   </body>
 
