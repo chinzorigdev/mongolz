@@ -4,6 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <section
+      class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full text-center"
+    >
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">Quiz</h1>
+      <h2 id="question" class="text-xl font-medium text-gray-600 mb-6"></h2>
+      <div id="options" class="w-full space-y-4"></div>
+      <button
+        id="next-btn"
+        class="bg-blue-500 px-6 py-2 hover:bg-blue-600 text-white font-semibold rounded-md shadow mt-6"
+      >
+        Next Question
+      </button>
+      <p id="score" class="mt-4 text-lg font-semibold text-gray-700 hidden"></p>
+    </section>
+
+    <script>
+      const quizData = [
+        {
+          question: "What is the capital of France?",
+          options: ["Berlin", "Madrid", "Paris", "Rome"],
+          answer: 2,
+        },
+        {
+          question: "Which planet is known as the Red Planet?",
+          options: ["Earth", "Mars", "Jupiter", "Venus"],
+          answer: 1,
+        },
+        {
+          question: "What is 2 + 2?",
+          options: ["3", "4", "5", "6"],
+          answer: 1,
+        },
+        {
+          question: "Which ocean is the largest?",
+          options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+          answer: 3,
+        },
+        {
+          question: "Who wrote 'Hamlet'?",
+          options: ["Shakespeare", "Hemingway", "Tolstoy", "Austen"],
+          answer: 0,
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+
+      function loadQuestion() {
+        const quiz = quizData[currentQuestion];
+        document.getElementById("question").textContent = quiz.question;
+        const optionsDiv = document.getElementById("options");
+        optionsDiv.innerHTML = "";
+
+        quiz.options.forEach((option, index) => {
+          const div = document.createElement("div");
+          div.classList.add("flex", "items-center", "gap-2");
+          div.innerHTML = `
+                    <input type="radio" name="quiz" id="option${index}" value="${index}" class="text-blue-500 focus:ring focus:ring-blue-300" />
+                    <label for="option${index}" class="text-gray-700">${option}</label>
+                `;
+          optionsDiv.appendChild(div);
+        });
+      }
+
+      document
+        .getElementById("next-btn")
+        .addEventListener("click", function () {
+          const selectedOption = document.querySelector(
+            'input[name="quiz"]:checked'
+          );
+          if (!selectedOption) {
+            alert("Please select an answer!");
+            return;
+          }
+
+          if (
+            parseInt(selectedOption.value) === quizData[currentQuestion].answer
+          ) {
+            score++;
+          }
+
+          currentQuestion++;
+
+          if (currentQuestion < quizData.length) {
+            loadQuestion();
+          } else {
+            document.getElementById("question").textContent = "Quiz Completed!";
+            document.getElementById("options").innerHTML = "";
+            document.getElementById("next-btn").style.display = "none";
+            const scoreText = document.getElementById("score");
+            scoreText.textContent = `Your score: ${score} / ${quizData.length}`;
+            scoreText.classList.remove("hidden");
+          }
+        });
+
+      loadQuestion();
+    </script>
+  </body>
 </html>
