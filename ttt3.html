@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-xl rounded-xl p-6 w-full max-w-sm text-center">
+      <h1 class="text-3xl font-bold mb-4 text-gray-800">Tic Tac Toe</h1>
+
+      <!-- Scoreboard -->
+      <div class="flex justify-between mb-4 text-lg font-medium text-gray-700">
+        <div>X: <span id="scoreX">0</span></div>
+        <div>O: <span id="scoreO">0</span></div>
+      </div>
+
+      <!-- Board -->
+      <div id="board" class="grid grid-cols-3 gap-2 mb-4"></div>
+
+      <!-- Status -->
+      <div id="status" class="text-lg font-semibold text-gray-600 mb-4">
+        Player X's turn
+      </div>
+
+      <!-- Reset button -->
+      <button
+        id="resetBtn"
+        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+      >
+        Restart Game
+      </button>
+    </div>
+
+    <script>
+      const boardElement = document.getElementById("board");
+      const statusElement = document.getElementById("status");
+      const resetButton = document.getElementById("resetBtn");
+      const scoreXElement = document.getElementById("scoreX");
+      const scoreOElement = document.getElementById("scoreO");
+
+      const gameState = {
+        board: Array(9).fill(""),
+        currentPlayer: "X",
+        gameActive: true,
+        scores: { X: 0, O: 0 },
+      };
+
+      const winConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+
+      function initializeGame() {
+        boardElement.innerHTML = "";
+        gameState.board = Array(9).fill("");
+        gameState.currentPlayer = "X";
+        gameState.gameActive = true;
+        statusElement.textContent = `Player ${gameState.currentPlayer}'s turn`;
+
+        for (let i = 0; i < 9; i++) {
+          const cell = document.createElement("div");
+          cell.className =
+            "cell bg-orange-100 text-2xl font-bold flex items-center justify-center h-24 rounded-lg cursor-pointer hover:bg-orange-200 transition";
+          cell.dataset.index = i;
+          cell.addEventListener("click", handleCellClick);
+          boardElement.appendChild(cell);
+        }
+      }
+
+      function handleCellClick(e) {
+        const cell = e.target;
+        const index = cell.dataset.index;
+
+        if (gameState.board[index] !== "" || !gameState.gameActive) return;
+
+        gameState.board[index] = gameState.currentPlayer;
+        cell.textContent = gameState.currentPlayer;
+        cell.classList.add("pointer-events-none");
+
+        const winner = checkWinner();
+        if (winner) {
+          handleWin(winner);
+        } else if (!gameState.board.includes("")) {
+          handleDraw();
+        } else {
+          switchPlayer();
+        }
+      }
+
+      function switchPlayer() {
+        gameState.currentPlayer = gameState.currentPlayer === "X" ? "O" : "X";
+        statusElement.textContent = `Player ${gameState.currentPlayer}'s turn`;
+      }
+
+      function checkWinner() {
+        for (const [a, b, c] of winConditions) {
+          const val = gameState.board[a];
+          if (val && val === gameState.board[b] && val === gameState.board[c]) {
+            highlightWinnerCells([a, b, c]);
+            return val;
+          }
+        }
+        return null;
+      }
+
+      function handleWin(winner) {
+        gameState.gameActive = false;
+        statusElement.textContent = `Player ${winner} wins!`;
+
+        gameState.scores[winner]++;
+        updateScores();
+      }
+
+      function highlightWinnerCells(indices) {
+        indices.forEach((i) => {
+          const cell = boardElement.querySelector(`[data-index='${i}']`);
+          cell.classList.add("bg-green-300", "text-green-900");
+        });
+      }
+
+      function handleDraw() {
+        gameState.gameActive = false;
+        statusElement.textContent = "It's a draw!";
+      }
+
+      function updateScores() {
+        scoreXElement.textContent = gameState.scores.X;
+        scoreOElement.textContent = gameState.scores.O;
+      }
+
+      resetButton.addEventListener("click", initializeGame);
+
+      initializeGame();
+    </script>
+  </body>
+</html>

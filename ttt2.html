@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <!-- Tic Tac Toe -->
+    <section
+      id="ttt"
+      class="bg-white shadow-lg rounded-lg p-6 max-w-md w-full flex flex-col items-center"
+    >
+      <h1 class="text-3xl font-bold text-center text-gray-800 mb-4">
+        Tic Tac Toe
+      </h1>
+      <p id="playerDisplay" class="text-lg font-semibold text-blue-500 mb-4">
+        Player X
+      </p>
+
+      <!-- Game Board -->
+      <div class="grid grid-cols-3 gap-2">
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+        <button
+          class="cell w-16 h-16 bg-orange-100 text-2xl font-bold flex items-center justify-center rounded-md shadow hover:bg-orange-200 cursor-pointer"
+        ></button>
+      </div>
+
+      <!-- Reset Button -->
+      <button
+        id="resetButton"
+        class="mt-6 px-6 py-2 bg-red-500 text-white font-semibold rounded-md shadow hover:bg-red-600"
+      >
+        Reset
+      </button>
+
+      <!-- Game Message -->
+      <p
+        id="gameMessage"
+        class="mt-4 text-lg font-semibold text-gray-700 hidden"
+      ></p>
+    </section>
+
+    <script>
+      // Selectors
+      const cells = document.querySelectorAll(".cell");
+      const playerDisplay = document.getElementById("playerDisplay");
+      const resetButton = document.getElementById("resetButton");
+      const gameMessage = document.getElementById("gameMessage");
+
+      // Game State
+      let currentPlayer = "X";
+      let gameBoard = Array(9).fill("");
+
+      const winningConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+
+      // Check for Winner
+      const checkWinner = () => {
+        for (const condition of winningConditions) {
+          const [a, b, c] = condition;
+
+          if (
+            gameBoard[a] &&
+            gameBoard[a] === gameBoard[b] &&
+            gameBoard[a] === gameBoard[c]
+          ) {
+            return gameBoard[a];
+          }
+        }
+        return null;
+      };
+
+      // Check for Draw
+      const checkDraw = () => gameBoard.every((cell) => cell !== "");
+
+      // Handle Cell Click
+      const handleCellClick = (e) => {
+        const index = e.target.dataset.index;
+
+        if (gameBoard[index] || checkWinner()) return;
+
+        gameBoard[index] = currentPlayer;
+        e.target.textContent = currentPlayer;
+
+        const winner = checkWinner();
+        if (winner) {
+          gameMessage.textContent = `Player ${winner} wins!`;
+          gameMessage.classList.remove("hidden");
+          return;
+        }
+
+        if (checkDraw()) {
+          gameMessage.textContent = "It's a draw!";
+          gameMessage.classList.remove("hidden");
+          return;
+        }
+
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+        playerDisplay.textContent = `Player ${currentPlayer}`;
+      };
+
+      // Handle Reset
+      const handleReset = () => {
+        currentPlayer = "X";
+        gameBoard = Array(9).fill("");
+        playerDisplay.textContent = `Player ${currentPlayer}`;
+        gameMessage.classList.add("hidden");
+        cells.forEach((cell) => (cell.textContent = ""));
+      };
+
+      // Initialize Game
+      cells.forEach((cell, index) => {
+        cell.dataset.index = index;
+        cell.addEventListener("click", handleCellClick);
+      });
+
+      resetButton.addEventListener("click", handleReset);
+    </script>
+  </body>
+</html>
